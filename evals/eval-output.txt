@@ -1,0 +1,97 @@
+
+Functional: 37/37
+  PASS  App boots to the welcome screen
+  PASS  Onboarding keeps Continue disabled until a choice is made
+  PASS  Choosing a situation enables Continue
+  PASS  Suggested amount is 10% of the band midpoint for students
+  PASS  Comfort label reacts live to the amount slider
+  PASS  Plan screen shows one row per goal
+  PASS  Buckets follow the horizon: trip Safe, studies Balanced, Future me Growth
+  PASS  Editing a goal to 60 months moves it to Growth and re-splits the money
+  PASS  UPI approval lands on the success screen
+  PASS  First instalment is invested on day one and the streak starts at 1
+  PASS  Home lists every goal, with the tab bar visible
+  PASS  Turning Calm view off shows the daily change
+  PASS  Payday invests exactly the amount shown, split across goals
+  PASS  Fast-forward adds six instalments and six streak months
+  PASS  No console errors during the first-time flow
+  PASS  Sample user loads with goals and a 3-month streak
+  PASS  Dip screen explains each goal and gives the 2020 history check
+  PASS  "Keep my plan going" returns to Home
+  PASS  A byte answered right gives 30 XP (10 for finishing, 20 for correct)
+  PASS  Replaying a byte gives no extra XP
+  PASS  A wrong answer still explains why and gives 10 XP
+  PASS  Money words open a plain definition that switches to Hinglish
+  PASS  Reading the reality check unlocks the leverage lab
+  PASS  Three leverage-lab rounds unlock the quiz
+  PASS  Passing the quiz opens the guardrails step
+  PASS  An active license shows the chosen loss limit
+  PASS  Tip Check rates the Telegram scam High risk with 3+ flags
+  PASS  Tip Check rates the friend's FOMO message Medium risk
+  PASS  Tip Check rates the sensible plan Low risk
+  PASS  Future simulator updates the chance of loss live   [29% at 1 yr, 2% at 10 yrs]
+  PASS  Back goes from fund to category to Explore
+  PASS  Search finds funds and money words
+  PASS  A nudge confirms once and cannot be spammed
+  PASS  Restart clears everything back to the welcome screen
+  PASS  No console errors during the returning-user flows
+  PASS  Plan maths holds on all 6804 combinations: SIPs sum to the monthly amount, in ₹50 steps, each ₹100+ or zero
+  PASS  Crawled 135 screens, sheets and story slides without console errors
+
+Guardrails: 19/19
+  PASS  Calm view is on by default and hides the daily change
+  PASS  A market dip shows a calm card on Home, not an alarm
+  PASS  Pausing shows one honest screen before anything changes
+  PASS  After that screen, pausing works (the user keeps control)
+  PASS  Every SIP can be paused and resumed
+  PASS  F&O shows as locked in Explore
+  PASS  License steps unlock strictly in order
+  PASS  The quiz needs 3 of 4 to pass
+  PASS  Apply stays disabled until the risk is acknowledged
+  PASS  Applying starts a 24-hour cooling-off, not instant access
+  PASS  Pasted text is escaped and never runs as HTML
+  PASS  Picking a risky fund for a short-term goal warns first
+  PASS  Squad never shows rupee amounts
+  PASS  The consistency board is ranked by streak, not returns
+  PASS  With payday autopilot off, payday never nags
+  PASS  F&O never appears in any of the 6804 generated plans
+  PASS  No hype phrases on any of 135 screens (quoted scam examples excluded)
+  PASS  All 10 projections show a downside case and "Illustrative, not guaranteed"
+  PASS  Every fund page (8) shows its riskometer level and expense ratio
+
+Accessibility & integrity: 14/14
+  PASS  Monte Carlo percentiles stay ordered every month (safe)
+  PASS  Monte Carlo percentiles stay ordered every month (balanced)
+  PASS  Monte Carlo percentiles stay ordered every month (growth)
+  PASS  Chance of ending below what you put in falls as years rise (Growth)   [24.0% > 8.0% > 2.5% > 0.0%]
+  PASS  Safe futures are narrower than Growth futures
+  PASS  Every icon-only button has an accessible name
+  PASS  Every screen has a top-level heading
+  PASS  Text contrast is at least 4.5:1 on all 61 light-theme pairs
+  PASS  Text contrast is at least 4.5:1 on all 54 dark-theme pairs
+  PASS  All 20 kinds of tap target are at least 44 px tall
+  PASS  Reduced-motion preference is respected
+  PASS  Phone layout handles notches (viewport-fit and safe-area insets)
+  PASS  Single HTML file under 300 KB
+  PASS  No network calls except Google Fonts (no tracking, no APIs)
+
+Personas: 4/4
+  PASS  Riya, 20, student, ₹300 a month, trip plus Future me, stressed by dips
+  PASS  Arjun, 24, first job, ₹10,000 a month, emergency fund plus laptop plus Future me
+  PASS  Sana, 25, freelancer, ₹3,500 a month, higher studies plus Future me
+  PASS  Kabir, 21, student with irregular money, just exploring
+
+Content: 6/6
+  PASS  Every money word used in the UI (18) has a decoder entry
+  PASS  All 18 required money words are in the decoder, each with a Hinglish version
+  PASS  All 7 bytes have 3 to 5 slides and one quiz with exactly one right answer and an explanation
+  PASS  Every byte reads at Flesch 50 or above (plain English)   [sip 86, index 85, red 93, emergency 93, fees 84, fno 86, scam 79]
+  PASS  The money-word decoder reads at Flesch 50 or above   [76]
+  PASS  No sentence in bytes or definitions runs past 20 words
+
+Notes
+  Readability: sip 86, index 85, red 93, emergency 93, fees 84, fno 86, scam 79, decoder 76 (Flesch reading ease)
+  Spec palette coral #C93434 on its tint #FBE6E6 measures 4.36:1, below 4.5:1, so the build ships #B42D2D (5.24:1)
+  File size 138 KB
+
+Total: 80/80 passed
